@@ -10,7 +10,7 @@ If you encounter any problems, bugs, errors, or have suggestions to improve the 
 
 ## CONTACT INFORMATION
 
-Feel free to contact us with your feedback, questions, or suggestions. We're here to help and appreciate your input!
+Feel free to contact me with your feedback, questions, or suggestions. We're here to help and appreciate your input!
 
 - **DISCORD**: `xmatak`
 - **EMAIL**: [exmatak@gmail.com](mailto:exmatak@gmail.com)
