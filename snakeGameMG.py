@@ -17,7 +17,7 @@ snake = turtle.Turtle()
 snake.shape("square")
 snake.color("white")
 snake.penup()
-snake.goto(100, 0)
+snake.goto(0, 0)
 # setup jidla
 food = turtle.Turtle()
 food.penup()
@@ -57,16 +57,16 @@ def left():
 def move():  # pohyb dopredu
     snake.forward(20)
 
-def clearSegments():
+def clearSegments(): # derenderovani segmentu po smrti
     for segment in segments:
         segment.clear()
         segment.reset()
     segments.clear()
 
-def roundToTwenty(number):
+def roundToTwenty(number): # pouzite na gridy po dvaceti
     return ((int(number) + 19) // 20) * 20
 
-def death():
+def death(): # proste funkce na smrt
     global score
     clearSegments()
     coordinates.clear()
@@ -81,13 +81,13 @@ def death():
     time.sleep(1)
 
 
-def writeScore():
+def writeScore(): # zapisovani score
     global score
     pen.color("yellow")
     pen.clear()
     pen.write(f"Score: {score}", align="center", font=("calibri", 24, "bold"))
 
-def testUmrti():
+def testUmrti(): # zkousi jak smrt na borderu tak smrt na vlastni ocas
     global score
     if [roundToTwenty(snake.xcor()), roundToTwenty(snake.ycor())] in coordinates[:-1]:
         death()
@@ -99,10 +99,11 @@ def testUmrti():
     writeScore()
 
 
-def testJidlo():
+def testJidlo(): 
     """
-    Funkce pro testování, zda hráč snědl jídlo a provedení akcí v případě, že hráč jídlo snědl.
+    Funkce pro testování, zda hráč snědl jídlo a provedení akcí v případě, že hráč jídlo snědl. 
     """
+    # jinej komentar pro zkouseni jak se commentuje ve vscodu :D
     global segment
     global score
     if snake.distance(food) < 20:
@@ -118,7 +119,7 @@ def testJidlo():
 
 #region MAIN LOOP A GAME LOOP
 
-window.listen()
+window.listen() # poslouchani keypressu
 window.onkeypress(up, "Up")
 window.onkeypress(right, "Right")
 window.onkeypress(down, "Down")
@@ -153,13 +154,9 @@ while True:
     # print(coordinates)
     # print(segments)
     #endregion
-    
     move()
-
-    if score < 20:
+    if score < 20: # podle skore snizuje tickrate, hra je tim "rychlejsi"
         time.sleep(0.2 - (0.01 * score))
-
-
     window.update()
     testJidlo()
 #endregion
