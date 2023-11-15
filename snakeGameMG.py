@@ -97,8 +97,7 @@ def testUmrti(): # zkousi jak smrt na borderu tak smrt na vlastni ocas
         death()
         print("umrel na hranice")
     writeScore()
-
-
+    
 def testJidlo(): 
     """
     Funkce pro testování, zda hráč snědl jídlo a provedení akcí v případě, že hráč jídlo snědl. 
