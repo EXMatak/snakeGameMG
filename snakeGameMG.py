@@ -87,7 +87,7 @@ def writeScore(): # zapisovani score
     pen.clear()
     pen.write(f"Score: {score}", align="center", font=("calibri", 24, "bold"))
 
-def testUmrti(): # zkousi jak smrt na borderu tak smrt na vlastni ocas
+def tryDeath(): # zkousi jak smrt na borderu tak smrt na vlastni ocas
     global score
     if [roundToTwenty(snake.xcor()), roundToTwenty(snake.ycor())] in coordinates[:-1]:
         death()
@@ -98,7 +98,7 @@ def testUmrti(): # zkousi jak smrt na borderu tak smrt na vlastni ocas
         print("umrel na hranice")
     writeScore()
     
-def testJidlo(): 
+def tryFood(): 
     """
     Funkce pro testování, zda hráč snědl jídlo a provedení akcí v případě, že hráč jídlo snědl. 
     """
@@ -124,8 +124,7 @@ window.onkeypress(right, "Right")
 window.onkeypress(down, "Down")
 window.onkeypress(left, "Left")
 while True:
-    testUmrti()
-
+    tryDeath()
     # udelej novej segment a pridej ho k listu
     segment = turtle.Turtle()
     segment.shape("square")
@@ -141,8 +140,6 @@ while True:
         segments[0].reset()
         segments.pop(0)
         coordinates.pop(0)
-
-
     #region DEBUG TOOLS
     # if [int(snake.xcor()), int(snake.ycor())] in poleSouradnic[:-1]:
     #     print("Aktualni souradnice je v poli")
@@ -157,5 +154,5 @@ while True:
     if score < 20: # podle skore snizuje tickrate, hra je tim "rychlejsi"
         time.sleep(0.2 - (0.01 * score))
     window.update()
-    testJidlo()
+    tryFood()
 #endregion

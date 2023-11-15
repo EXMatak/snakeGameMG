@@ -18,7 +18,7 @@ If you encounter any problems, bugs, errors, or have suggestions to improve the 
 
 ## CONTACT INFORMATION
 
-Feel free to contact me with your feedback, questions, or suggestions. We're here to help and appreciate your input!
+Feel free to contact me with your feedback, questions, or suggestions. I'm here to help and appreciate your input!
 
 - **DISCORD**: `xmatak`
 - **EMAIL**: [exmatak@gmail.com](mailto:exmatak@gmail.com)
@@ -56,6 +56,8 @@ The Snake Game is a classic arcade game where you control a snake that moves aro
      ```
      python snakeGameMG.py
      ```
+     An executable file (.exe) has recently been added to the project repository. This file has been tested and confirmed to work on my own device. However, it's compatibility with other systems has not yet been verified.
+     Users are advised to exercise caution when downloading and running this file, as its performance and stability on different devices may vary. 
 
 3. **GAME CONTROLS:**
    - Use the arrow keys to control the snake's direction.
