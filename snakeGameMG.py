@@ -153,8 +153,7 @@ def testJidlo():
     global score
     if snake.distance(food) < 20:
         score += 1
-        barvaHada = random.choice(
-            colors)  # ac se muze jevit, ze toto ve hre zpusobuje bug, ze se nemeni barva celeho hada, neni to tak
+        barvaHada = random.choice(colors)  # ac se muze jevit, ze toto ve hre zpusobuje bug, ze se nemeni barva celeho hada, neni to tak
         snake.color(barvaHada)  # tato implemetace simuluje jak se jablko hadovi dostava "do bricha"
         segment.color(barvaHada)
         chime.success()
