@@ -38,6 +38,11 @@ The Snake Game is a classic arcade game where you control a snake that moves aro
 - The snake changes color after eating each piece of food.
 - The game is displayed on a 600x600 grid.
 
+## NEW FEATURES
+
+- **Highscore System**: Implemented a new local highscore system to track the highest score achieved on your machine. Beat your own record, close the game and come back to your highscore!
+- **Background Music**: Added background music by hkmori. Credit to hkmori for the music. [Listen here](https://www.youtube.com/watch?v=-NEGsRc3fbA)
+
 ## HOW TO PLAY
 
 1. **INSTALLATION:** Ensure you have Python 3.x installed on your system.
@@ -77,8 +82,7 @@ This game is a simple implementation of the classic Snake Game and serves as a f
 
 ## WORK IN PROGRESS (WIPs)
 
-- More optimized implementation: The current code renders the snake's tail many times, which can lead to performance issues at higher scores. A patch to optimize this behavior is in progress.
-- You might experience flickering of squares for a few moments while collecting your first few apples. At this moment I have no idea what causes it and how to fix it. I am offering a hotdog from the buffet as a bug bounty.
+- Might try to implement a system that automatically tracks the background song BPM to match the ingame speed limit. If that happens, I will add more songs.
 
 Enjoy playing the Snake Game! If you have any questions or suggestions, feel free to reach out.
 
